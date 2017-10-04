@@ -43,13 +43,21 @@ public class DataInitialization {
         
         
         Employee em=new Employee();
-        em.setFirstName("Harold");
-        em.setLastName("Kumar");
+        em.setFirstName("Harry");
+        em.setLastName("Potter");
         em.setCredentials(user);
         em.getAddresses().add(address);
         em.getPhoneNumbers().add(number);
         
+        Employee em1=new Employee();
+        em1.setFirstName("Ronald");
+        em1.setLastName("Weasley");
+        em1.setCredentials(user);
+        em1.getAddresses().add(address);
+        em1.getPhoneNumbers().add(number);
+        
         
         er.addEmployee(em);
+        er.addEmployee(em1);
     }
 }
