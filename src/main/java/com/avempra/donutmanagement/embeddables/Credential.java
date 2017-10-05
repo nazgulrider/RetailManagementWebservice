@@ -6,6 +6,7 @@
 package com.avempra.donutmanagement.embeddables;
 
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 /**
@@ -14,7 +15,9 @@ import javax.persistence.Embeddable;
  */
 @Embeddable
 public class Credential implements Serializable {
+    @Column(name="USERNAME")
     private String userName;
+    @Column(name="PASSWORD")
     private String password;
 
     public Credential() {

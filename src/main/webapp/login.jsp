@@ -3,14 +3,14 @@
 <html ng-app="DonutApp">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Employees</title>
          
 
     </head>
     <body>
 
         <div class="container jumbotron " ng-controller="EmployeeCtrl as ctrl">   
-            <h1>My Contact App</h1>
+            <h1>Employee List</h1>
             <ul class="list-group">
                 <li class="list-group-item" ng-repeat="employee in ctrl.employees" ng-click="ctrl.selectEmployee($index)">
                     <span>{{employee.firstName + " " + employee.lastName + " is the best person ever!"}}</span>

@@ -3,6 +3,9 @@
   <persistence-unit name="com.avempra_DonutManagement_war_1.0-SNAPSHOTPU" transaction-type="JTA">
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
     <jta-data-source>jdbc/mySQL</jta-data-source>
+    <class>com.avempra.donutmanagement.entity.Employee</class>
+    <class>com.avempra.donutmanagement.entity.Item</class>
+    <class>com.avempra.donutmanagement.entity.Transaction</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>

@@ -15,9 +15,10 @@ import javax.persistence.Embeddable;
  */
 @Embeddable
 public class PhoneNumber implements Serializable {
+ 
     @Column(name="PHONE")
     private String phoneNumber;
-
+   
     public PhoneNumber() {
     }
 
@@ -28,6 +29,6 @@ public class PhoneNumber implements Serializable {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-    
+
     
 }
