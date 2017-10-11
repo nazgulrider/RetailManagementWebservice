@@ -21,7 +21,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinTable;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.SecondaryTable;
 import javax.persistence.Table;
@@ -37,6 +38,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 @SecondaryTable(name = "CREDENTIALS",
         pkJoinColumns = @PrimaryKeyJoinColumn(name = "Employee_ID"))
 @XmlRootElement
+@NamedQueries({
+    @NamedQuery(name="Employee.findAll", query="SELECT e FROM Employee e"),
+    @NamedQuery(name="Employee.findById", query="SELECT e FROM Employee e WHERE e.Id = :Id")
+})
 public class Employee implements Serializable {
 
     private static final long serialVersionUID = 1L;

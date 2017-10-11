@@ -12,6 +12,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
@@ -32,6 +33,13 @@ public class TransactionResource {
     public List<Transaction> getTransactions(){
        
        return em.createNamedQuery("findAllTransactions").getResultList();
+    }
+    
+    @GET
+    @Path("/{transactionID}")    
+    @Produces(MediaType.APPLICATION_JSON)
+    public Transaction getTransaction(@PathParam("tansactionID")long id){
+        return em.find(Transaction.class, id);
     }
 
    
