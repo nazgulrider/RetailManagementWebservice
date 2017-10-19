@@ -40,7 +40,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name="Employee.findAll", query="SELECT e FROM Employee e"),
-    @NamedQuery(name="Employee.findById", query="SELECT e FROM Employee e WHERE e.Id = :Id")
+    @NamedQuery(name="Employee.findById", query="SELECT e FROM Employee e WHERE e.id = :Id")
 })
 public class Employee implements Serializable {
 
@@ -68,7 +68,7 @@ public class Employee implements Serializable {
     @ElementCollection(fetch = FetchType.EAGER)
     private Set<PhoneNumber> phoneNumbers = new HashSet<PhoneNumber>();
     
-    @Embedded
+    @Embedded 
     @AttributeOverrides({
         @AttributeOverride(name = "userName", column = @Column(table = "CREDENTIALS")),
         @AttributeOverride(name = "password", column = @Column(table = "CREDENTIALS"))
