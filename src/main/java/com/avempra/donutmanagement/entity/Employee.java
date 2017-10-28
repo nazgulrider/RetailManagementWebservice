@@ -74,7 +74,7 @@ public class Employee implements Serializable {
         @AttributeOverride(name = "password", column = @Column(table = "CREDENTIALS"))
         
     })
-    Credential credentials;
+    private Credential credentials;
 
     public Integer getId() {
         return id;

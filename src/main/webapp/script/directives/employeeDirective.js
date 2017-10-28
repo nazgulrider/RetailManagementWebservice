@@ -1,0 +1,9 @@
+(function(){
+angular.module("DonutApp").directive("employeeDirective",[function(){
+    return{
+        restrict:"EA",
+        templateUrl:"employeeDetails.html",
+        controller:"EmployeeCtrl"
+    };
+}]);
+})();

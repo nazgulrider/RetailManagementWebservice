@@ -1,0 +1,29 @@
+<div class="container jumbotron " ng-controller="EmployeeCtrl as ctrl">   
+            <h1>Employee List</h1>
+              <table class="table table-dark" ng-controller="EmployeeCtrl as ctrl">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Pay</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="employee in ctrl.employees" ng-click="ctrl.selectEmployee($index)">
+                        <td>{{employee.id}}</td>
+                        <td>{{employee.firstName}}</td>
+                        <td>{{employee.lastName}}</td>
+                        <td>{{employee.jobTitle}}</td>
+                        <td>{{employee.hourlyPay}}</td>
+                    </tr>
+                   
+                </tbody>
+            </table>  
+            <form action="employeeForm.html">
+                <input type="submit" class="btn btn-primary" value="Add Employee">
+                <input type="submit" class="btn btn-primary" value="Delete Employee">
+            </form>
+            
+        </div> 

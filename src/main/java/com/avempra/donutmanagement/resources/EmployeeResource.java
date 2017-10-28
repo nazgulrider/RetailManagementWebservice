@@ -24,6 +24,8 @@ import javax.ws.rs.core.MediaType;
  */
 @Path("/employees")
 @Stateless
+@Consumes(MediaType.APPLICATION_JSON)
+@Produces(MediaType.APPLICATION_JSON)
 public class EmployeeResource {
     @Inject
     private IEmployeeDAO employeeDAO;
@@ -36,7 +38,6 @@ public class EmployeeResource {
     * @throws Exception in case of any problems with fetching employee data
     */
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
     public List<Employee> findAllEmployees() throws Exception{
        
         return employeeDAO.getAllEmployees();        
@@ -51,7 +52,6 @@ public class EmployeeResource {
     
     @GET
     @Path("/{employeeId}")
-    @Produces(MediaType.APPLICATION_JSON)
     public Employee findEmployee(@PathParam("employeeId")int Id) throws Exception{
         
         return employeeDAO.getEmployee(Id);
@@ -63,9 +63,7 @@ public class EmployeeResource {
      * @param employee object to be added to the database
      * @throws java.lang.Exception
      */
-    @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
+    @POST    
     public void addEmployee(Employee employee) throws Exception{
         employeeDAO.insertEmployee(employee);
         
