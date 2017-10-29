@@ -1,4 +1,4 @@
-var app = angular.module("DonutApp", []);
+var app = angular.module("DonutApp", ["ngCookies"]);
 
 
 

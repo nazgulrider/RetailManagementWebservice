@@ -15,6 +15,8 @@ import javax.persistence.Embeddable;
  */
 @Embeddable
 public class Credential implements Serializable {
+    
+    
     @Column(name="USERNAME")
     private String userName;
     @Column(name="PASSWORD")

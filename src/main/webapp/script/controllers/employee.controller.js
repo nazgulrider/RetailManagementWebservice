@@ -13,6 +13,7 @@ function EmployeeCtrl(EmployeeSvc){
     this.selectEmployee=function(index){
         this.selectedContact=this.employees[index];
     };
+    
 };
 })();
 

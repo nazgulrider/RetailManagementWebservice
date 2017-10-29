@@ -11,6 +11,7 @@ import java.util.List;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -52,8 +53,7 @@ public class EmployeeResource {
     
     @GET
     @Path("/{employeeId}")
-    public Employee findEmployee(@PathParam("employeeId")int Id) throws Exception{
-        
+    public Employee findEmployee(@PathParam("employeeId")int Id) throws Exception{        
         return employeeDAO.getEmployee(Id);
         
     }
@@ -65,9 +65,13 @@ public class EmployeeResource {
      */
     @POST    
     public void addEmployee(Employee employee) throws Exception{
-        employeeDAO.insertEmployee(employee);
-        
+        employeeDAO.insertEmployee(employee);        
     }
 
+    @DELETE
+    @Path("/{employeeId}")
+    public void deleteEmployee(@PathParam("employeeId")int Id) throws Exception{        
+        employeeDAO.deleteEmployee(Id);       
+    }
     
 }
