@@ -7,7 +7,7 @@ function EmployeeCtrl(EmployeeSvc){
     var self=this;
     EmployeeSvc.getEmployees()
             .then(function(data){
-                self.employees =data;
+                self.employees = data;
     });
     
     this.selectEmployee=function(index){

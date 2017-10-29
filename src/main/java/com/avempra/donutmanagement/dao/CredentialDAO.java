@@ -16,7 +16,7 @@ import javax.persistence.PersistenceContext;
  */
 @RequestScoped
 public class CredentialDAO implements ICredentialDAO {
-    @PersistenceContext
+    @PersistenceContext(unitName="com.avempra_DonutManagement_war_1.0-SNAPSHOTPU")
     EntityManager em;
     
 

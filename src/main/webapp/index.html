@@ -11,6 +11,7 @@
         <br>
         
         <div>
+            <navbar-directive ng-if="authorized" ></navbar-directive>
             <login-directive ng-if="!authorized" ></login-directive>
             <employee-directive ng-if="authorized" ></employee-directive>
         </div>
@@ -24,12 +25,13 @@
         <script src="js/angular-cookies.js"></script>
         <script src="script/app.js"></script>
         <script src="script/services/loginService.js"></script>        
-        <script src="script/services/employeedata.service.js"></script>
+        <script src="script/services/employeeService.js"></script>
         <script src="script/controllers/mainCtrl.js"></script>
         <script src="script/controllers/loginCtrl.js"></script>
-        <script src="script/controllers/employee.controller.js"></script>
+        <script src="script/controllers/employeeCtrl.js"></script>
         <script src="script/directives/loginDirective.js"></script>
         <script src="script/directives/employeeDirective.js"></script>
+        <script src="script/directives/navbarDirective.js"></script>
 
     </body>
 </html>

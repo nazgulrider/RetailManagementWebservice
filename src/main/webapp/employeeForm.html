@@ -1,16 +1,39 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
+<html ng-app="DonutApp">
     <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add Employee</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
     </head>
-    <body>
-        <div>TODO write content</div>
+    <body  ng-controller="mainCtrl">
+        <br>
+        
+        <div>
+            <navbar-directive ng-if="authorized" ></navbar-directive>
+            <employee-form-directive ng-if="authorized" ></employee-form-directive>
+        </div>
+
+
+        
+
+
+        <script src="js/bootstrap.min.js"></script>       
+        <script src="js/angular.min.js"></script>
+        <script src="js/angular-cookies.js"></script>
+        <script src="script/app.js"></script>
+        <script src="script/services/loginService.js"></script>        
+        <script src="script/services/employeeService.js"></script>
+        <script src="script/services/employeeFormService.js"></script>
+        <script src="script/controllers/mainCtrl.js"></script>
+        <script src="script/controllers/loginCtrl.js"></script>
+        <script src="script/controllers/employeeCtrl.js"></script>
+        <script src="script/controllers/employeeFormCtrl.js"></script>
+        <script src="script/directives/loginDirective.js"></script>
+        <script src="script/directives/employeeDirective.js"></script>
+        <script src="script/directives/employeeFormDirective.js"></script>
+        <script src="script/directives/navbarDirective.js"></script>
+
     </body>
 </html>

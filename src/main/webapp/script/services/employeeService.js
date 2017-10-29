@@ -12,5 +12,10 @@ app.service("EmployeeSvc", function($http){
         });
         return promise2;
     };
+    self.deleteEmployee = function(){
+        
+    };
+    
+    
 });
 })();
