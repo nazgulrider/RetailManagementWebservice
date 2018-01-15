@@ -4,7 +4,7 @@
         padding-bottom: 20px;
     }
 </style>
-
+ 
 
 <div class="container" ng-controller="EmployeeCtrl as ctrl"> 
     
@@ -18,16 +18,18 @@
                 <th scope="col">Last Name</th>
                 <th scope="col">Title</th>
                 <th scope="col">Pay</th>
+                <th scope="col">Action</th>
             </tr>
         </thead>
         
         <tbody>
             <tr ng-repeat="employee in ctrl.employees" ng-click="ctrl.selectEmployee($index)">
-                <td>{{employee.id}}</td>
-                <td>{{employee.firstName}}</td>
-                <td>{{employee.lastName}}</td>
-                <td>{{employee.jobTitle}}</td>
-                <td>{{employee.hourlyPay}}</td>
+                <td class="text-center">{{employee.id}}</td>
+                <td class="text-center">{{employee.firstName}}</td>
+                <td class="text-center">{{employee.lastName}}</td>
+                <td class="text-center">{{employee.jobTitle}}</td>
+                <td class="text-center">{{employee.hourlyPay}}</td>
+                <td class="text-center"><a href="employeeForm.html" >UPDATE</a> | <a href="#" class="text-danger" ng-click="ctrl.deleteEmployee()">DELETE</a></td>
             </tr>
 
         </tbody>

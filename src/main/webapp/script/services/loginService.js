@@ -1,7 +1,7 @@
 (function () {
 
     var app = angular.module("DonutApp");
-    app.service("loginService", ['$cookies', function ($cookies) {
+    app.service("loginService", ['$cookies','$window', function ($cookies, $window) {
             function isAuth() {
                 if ($cookies.get('auth') === "true") {
                     return true;
@@ -54,6 +54,7 @@
             this.logout = () => {
                 $cookies.put('auth', 'false');
                 this.authorized = $cookies.get('auth') === "true";
+                $window.location.href = "index.html";
             };
 
         }]);

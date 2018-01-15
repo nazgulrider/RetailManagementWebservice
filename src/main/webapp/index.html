@@ -3,13 +3,15 @@
     <head>
         <title>Start Page</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">   
+        
+       
 
 
     </head>
     <body  ng-controller="mainCtrl">
         <br>
-        
+
         <div>
             <navbar-directive ng-if="authorized" ></navbar-directive>
             <login-directive ng-if="!authorized" ></login-directive>
@@ -17,12 +19,13 @@
         </div>
 
 
-        
+
 
 
         <script src="js/bootstrap.min.js"></script>       
         <script src="js/angular.min.js"></script>
         <script src="js/angular-cookies.js"></script>
+        <script src="js/jquery-3.2.1.min.js"></script>
         <script src="script/app.js"></script>
         <script src="script/services/loginService.js"></script>        
         <script src="script/services/employeeService.js"></script>

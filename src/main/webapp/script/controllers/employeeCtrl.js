@@ -14,6 +14,10 @@ function EmployeeCtrl(EmployeeSvc){
         this.selectedContact=this.employees[index];
     };
     
+    this.deleteEmployee=function(){
+        alert("Sure you want to delete the employee?");
+    };
+    
 };
 })();
 

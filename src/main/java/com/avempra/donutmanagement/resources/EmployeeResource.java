@@ -28,13 +28,17 @@ import javax.ws.rs.core.MediaType;
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class EmployeeResource {
+    /**
+     * CDI injection of the employeeDAO object interface
+     * 
+     */
     @Inject
     private IEmployeeDAO employeeDAO;
     
     
     
    /**
-    * gets all employees and 
+    * gets all employees as a list 
     * @return returns list of Employees
     * @throws Exception in case of any problems with fetching employee data
     */
